@@ -20,6 +20,10 @@ public class MarkdownParse {
                 currentIndex = closeParen + 1;
                 continue;
             }
+            if (!markdown.substring(closeBracket + 1, closeBracket + 2).equals("(")) {
+                currentIndex = closeParen + 1;
+                continue;
+            }
             if (closeParen < markdown.length() - 1 && markdown.substring(closeParen +
                     1).equals(")")) {
                 closeParen++;
