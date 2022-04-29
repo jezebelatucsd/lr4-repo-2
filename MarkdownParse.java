@@ -28,12 +28,12 @@ public class MarkdownParse {
                 continue;
             }
 
-            // if (markdown.substring(openParen + 1, closeParen).contains("(")) {
-            // if (closeParen + 1 < markdown.length() - 1) {
+            if (markdown.substring(openParen + 1, closeParen).contains("(")) {
+                if (closeParen + 1 < markdown.length() - 1) {
 
-            // closeParen = markdown.indexOf(")", closeParen + 1);
-            // }
-            // }
+                    closeParen = markdown.indexOf(")", closeParen + 1);
+                }
+            }
             if (closeParen < markdown.length() - 1 && markdown.substring(closeParen +
                     1).equals(")")) {
                 closeParen++;
