@@ -1,1 +1,1 @@
-[random link] (https://google.com)
+[random link](https://google(wee).com)
