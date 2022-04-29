@@ -100,4 +100,12 @@ public class MarkdownParseTest {
         assertEquals(answer, MarkdownParse.getLinks(content));
     }
 
+    @Test
+    public void failingTest() throws IOException {
+        List<String> answer = List.of("this is a failing test!");
+        Path fileName = Path.of("test-file8.md");
+        String content = Files.readString(fileName);
+        assertEquals(answer, MarkdownParse.getLinks(content));
+    }
+
 }
