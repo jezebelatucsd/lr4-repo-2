@@ -44,4 +44,60 @@ public class MarkdownParseTest {
         assertEquals(answer, MarkdownParse.getLinks(content));
     }
 
+    @Test
+    public void testGetLinksNewFile2() throws IOException {
+        List<String> answer = List.of("https://something.com", "some-page.html");
+        Path fileName = Path.of("test-file2.md");
+        String content = Files.readString(fileName);
+        assertEquals(answer, MarkdownParse.getLinks(content));
+    }
+
+    @Test
+    public void testGetLinksNewFile3() throws IOException {
+        List<String> answer = List.of();
+        Path fileName = Path.of("test-file3.md");
+        String content = Files.readString(fileName);
+        assertEquals(answer, MarkdownParse.getLinks(content));
+    }
+
+    @Test
+    public void testGetLinksNewFile4() throws IOException {
+        List<String> answer = List.of();
+        Path fileName = Path.of("test-file4.md");
+        String content = Files.readString(fileName);
+        assertEquals(answer, MarkdownParse.getLinks(content));
+    }
+
+    @Test
+    public void testGetLinksNewFile5() throws IOException {
+        List<String> answer = List.of();
+        Path fileName = Path.of("test-file5.md");
+        String content = Files.readString(fileName);
+        assertEquals(answer, MarkdownParse.getLinks(content));
+    }
+
+    @Test
+    public void testGetLinksNewFile6() throws IOException {
+        List<String> answer = List.of();
+        Path fileName = Path.of("test-file6.md");
+        String content = Files.readString(fileName);
+        assertEquals(answer, MarkdownParse.getLinks(content));
+    }
+
+    @Test
+    public void testGetLinksNewFile7() throws IOException {
+        List<String> answer = List.of();
+        Path fileName = Path.of("test-file7.md");
+        String content = Files.readString(fileName);
+        assertEquals(answer, MarkdownParse.getLinks(content));
+    }
+
+    @Test
+    public void testGetLinksNewFile8() throws IOException {
+        List<String> answer = List.of("a link on the first line");
+        Path fileName = Path.of("test-file8.md");
+        String content = Files.readString(fileName);
+        assertEquals(answer, MarkdownParse.getLinks(content));
+    }
+
 }
