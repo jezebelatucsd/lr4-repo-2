@@ -101,8 +101,8 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void failingTest() throws IOException {
-        List<String> answer = List.of("this is a failing test!");
+    public void fixedTest() throws IOException {
+        List<String> answer = List.of("a link on the first line");
         Path fileName = Path.of("test-file8.md");
         String content = Files.readString(fileName);
         assertEquals(answer, MarkdownParse.getLinks(content));
