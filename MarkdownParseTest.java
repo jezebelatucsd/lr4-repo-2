@@ -116,4 +116,14 @@ public class MarkdownParseTest {
         assertEquals(answer, MarkdownParse.getLinks(content));
     }
 
+     @Test
+    public void random() throws IOException {
+        List<String> answer = List.of("https://google(wee).com");
+        Path fileName = Path.of("test-file9.md");
+        String content = Files.readString(fileName);
+        System.out.println("hi");
+        assertEquals(answer, MarkdownParse.getLinks(content));
+    }
+    
+
 }
